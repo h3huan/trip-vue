@@ -7,6 +7,7 @@ import Components from "unplugin-vue-components/vite";
 import { VantResolver, VantImports } from "@vant/auto-import-resolver";
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/trip-vue/",
   plugins: [
     vue(),
     AutoImport({
