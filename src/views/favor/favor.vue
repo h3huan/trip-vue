@@ -5,8 +5,8 @@
     <h2>hron</h2>
     <van-image
       round
-      width="70rem"
-      height="60rem"
+      width="10rem"
+      height="10rem"
       src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
     />
   </div>
