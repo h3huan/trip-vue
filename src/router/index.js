@@ -24,6 +24,11 @@ const router = createRouter({
       path: "/mes",
       component: () => import("@/views/mes/mes.vue"),
     },
+    {
+      path: "/city",
+      component: () => import("@/views/city/city.vue"),
+      meta: {},
+    },
   ],
 });
 
