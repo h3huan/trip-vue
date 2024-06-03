@@ -18,6 +18,11 @@ const cityStore = useCityStore();
 cityStore.fetchAllCitiesData();
 const { allCities } = storeToRefs(cityStore);
 const currentGroup = computed(() => allCities.value[tabActive.value]);
+
+const cityClick = (city) => {
+  cityStore.statiCity = city;
+  router.back();
+};
 </script>
 
 <template>
@@ -40,7 +45,7 @@ const currentGroup = computed(() => allCities.value[tabActive.value]);
       <template v-for="(group, index) in currentGroup?.cities" :key="index">
         <van-index-anchor :index="group.group" />
         <template v-for="(city, indey) in group.cities" :key="indey">
-          <van-cell :title="city.cityName" />
+          <van-cell :title="city.cityName" @click="cityClick(city)" />
         </template>
       </template>
     </van-index-bar>
